@@ -1,0 +1,22 @@
+.homepage {
+  display: main;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "hero"
+    "specials"
+    "ratings"
+    "chicago";
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background: #495E57;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}

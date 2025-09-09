@@ -1,10 +1,12 @@
-function Main() {
-    return (
-        <>
-            <main>
+import "./styles/Main.css";
 
-            </main>
-        </>
+const Main = ({ children }) => {
+    return (
+        <main className="main-content">
+            <div className="main-container">
+                {children}
+            </div>
+        </main>
     );
 }
 

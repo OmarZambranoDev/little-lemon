@@ -1,17 +1,17 @@
+import "./styles/Nav.css";
+
 function Nav() {
     return (
-        <>
-            <nav>
-                <ul style={{display: "flex", listStyle: "none", gap: 40, justifyContent: "space-around"}}>
-                    <li a="">Home</li>
-                    <li a="">About</li>
-                    <li a="">Menu</li>
-                    <li a="">Reservations</li>
-                    <li a="">Order Online</li>
-                    <li a="">Login</li>
-                </ul>
-            </nav>
-        </>
+        <nav className="header-nav">
+            <ul className="nav-list">
+                <li className="nav-item" ><a href="" className="nav-link">Home</a></li>
+                <li className="nav-item" ><a href="" className="nav-link">About</a></li>
+                <li className="nav-item" ><a href="" className="nav-link">Menu</a></li>
+                <li className="nav-item" ><a href="" className="nav-link">Reservations</a></li>
+                <li className="nav-item" ><a href="" className="nav-link">Order Online</a></li>
+                <li className="nav-item" ><a href="" className="nav-link">Login</a></li>
+            </ul>
+        </nav>
     );
 }
 
