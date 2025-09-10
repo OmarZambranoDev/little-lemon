@@ -1,11 +1,10 @@
 import "./styles/Homepage.css";
-import Header from "./Header";
-import Footer from "./Footer";
+import Hero from "./Hero";
 
 function HomePage() {
     return (
         <div className="homepage">
-
+            <Hero />
         </div>
     );
 };
