@@ -45,9 +45,9 @@
 .image-section {
     display: flex;
     flex: 1;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: end;
 }
 
 .image {
@@ -65,8 +65,15 @@
     .image-section {
         display: flex;
         flex: 1;
-        align-items: normal;
+        flex-direction: column;
+        align-items: start;
         margin-bottom: 40px;
+    }
+
+    .image {
+        width: 360px;
+        height: 325px;
+        border-radius: 16px;
     }
 
     .description {
