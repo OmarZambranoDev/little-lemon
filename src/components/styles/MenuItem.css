@@ -1,0 +1,53 @@
+.menu-item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background: #EDEFEE;
+    border-radius: 16px 16px 0 0;
+}
+
+.menu-image {
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px 16px 0 0;
+    height: 240px;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.menu-title {
+    font-family: serif;
+}
+
+.menu-price {
+    color: #EE9972;
+}
+
+.menu-description {
+    padding: 0 2rem 2rem;
+    font-family: serif;
+    font-size: 18px;
+    height: 7rem;
+    color: #495E57;
+}
+
+.menu-order-button {
+    all: unset;
+    margin: 0 2rem 2rem;
+    font-family: serif;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.menu-order-button:hover {
+    color: #EE9972;
+    cursor: pointer;
+}
