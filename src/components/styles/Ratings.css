@@ -1,0 +1,42 @@
+.ratings {
+    grid-area: ratings;
+    background: #495E57;
+}
+
+.ratings-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 4rem 0;
+}
+
+.ratings-title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-family: serif;
+    padding: 2rem 0;
+}
+
+.ratings-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .ratings-container {
+        padding: 2rem;
+    }
+
+    .ratings-card-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

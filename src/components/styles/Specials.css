@@ -5,7 +5,6 @@
 .specials-container {
     max-width: 1200px;
     margin: 60px auto;
-    padding: 0 0 0 2rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -32,6 +31,9 @@
 }
 
 @media (max-width: 768px) {
+    .specials-container {
+        padding: 0 0 0 2rem;
+    }
     .specials-header {
         flex-direction: column;
         gap: 2em;

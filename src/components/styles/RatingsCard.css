@@ -1,0 +1,31 @@
+.ratings-card {
+    background: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ratings-text {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.ratings-icon {
+    display: flex;
+    margin: 1rem 0 2rem 0;
+    gap: 1rem;
+    align-items: center;
+}
+
+.ratings-review {
+    font-size: 14px;
+    font-family: serif;
+}
+
+@media (max-width: 768px) {
+    .ratings-card {
+        padding: 2rem;
+    }
+}

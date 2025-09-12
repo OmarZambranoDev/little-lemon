@@ -6,7 +6,6 @@
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 0 0 2rem;
     display: flex;
     justify-content: space-between;
 }
@@ -60,6 +59,7 @@
     .hero-container {
         flex-direction: column;
         gap: 0rem;
+        padding: 0 0 0 2rem;
     }
 
     .image-section {
