@@ -1,0 +1,101 @@
+.chicago {
+    grid-area: chicago;
+}
+
+.chicago-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+}
+
+.chicago-left-section {
+    display: flex;
+    flex: 1;
+}
+
+.chicago-left-content {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+.chicago-title {
+    font-size: 64px;
+    color: #495E57;
+    font-family: serif;
+}
+
+.chicago-subtitle {
+    font-size: 40px;
+    color: black;
+    font-family: serif;
+    margin: 0 0 2rem 0;
+}
+
+.chicago-description {
+    font-size: 18px;
+    color: black;
+    font-family: serif;
+    margin-bottom: 80px;
+}
+
+.chicago-image-container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    min-height: 400px;
+}
+
+.chicago-left-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.chicago-right-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .chicago-container {
+        flex-direction: column;
+        padding: 0 2rem 0rem 2rem;
+    }
+
+    .chicago-image-container {
+        position: relative;
+        width: 100%;
+        min-height: 250px;
+        height: 250px;
+        max-width: 400px;
+        margin: 0 auto;
+        transform: translateY(-5rem);
+    }
+
+    .chicago-left-image {
+        left: 0;
+        bottom: 0;
+        width: 60%;
+        height: 70%;
+        max-width: 240px;
+        max-height: 180px;
+    }
+
+    .chicago-right-image {
+        right: 0;
+        top: 0;
+        width: 60%;
+        height: 70%;
+        max-width: 240px;
+        max-height: 180px;
+    }
+}

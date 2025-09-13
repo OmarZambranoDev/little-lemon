@@ -18,7 +18,7 @@
     color: white;
     font-size: 40px;
     font-family: serif;
-    padding: 2rem 0;
+    padding: 2rem 0 4rem 0;
 }
 
 .ratings-card-container {
@@ -32,7 +32,7 @@
 
 @media (max-width: 768px) {
     .ratings-container {
-        padding: 2rem;
+        padding: 2rem 2rem 4rem;
     }
 
     .ratings-card-container {
