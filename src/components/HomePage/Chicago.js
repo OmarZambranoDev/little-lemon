@@ -1,5 +1,5 @@
 import "./styles/Chicago.css";
-import Image from "../assets/images/restauranfood.jpg";
+import Image from "../../assets/images/restauranfood.jpg";
 
 function Chicago() {
     return (

@@ -1,6 +1,6 @@
 import "./styles/Hero.css";
-import Button from "./Button";
-import Image from "../assets/images/restauranfood.jpg";
+import Button from "../Button";
+import Image from "../../assets/images/restauranfood.jpg";
 
 function Hero() {
     const onClick = () => {

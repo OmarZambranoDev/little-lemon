@@ -1,10 +1,10 @@
 import "./styles/Specials.css";
 import MenuItem from "./MenuItem";
-import Button from "./Button";
-import Salad from "../assets/images/greek_salad.jpg";
-import Bruchetta from "../assets/images/bruchetta.jpg";
-import LemonDessert from "../assets/images/lemon_dessert.jpg";
-import { MENU_ITEM_DESC } from "./utils/constants";
+import Button from "../Button";
+import Salad from "../../assets/images/greek_salad.jpg";
+import Bruchetta from "../../assets/images/bruchetta.jpg";
+import LemonDessert from "../../assets/images/lemon_dessert.jpg";
+import { MENU_ITEM_DESC } from "../utils/constants";
 
 function Specials() {
     return (
