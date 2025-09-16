@@ -3,7 +3,7 @@ import Image from "../../assets/images/restauranfood.jpg";
 
 function Chicago() {
     return (
-        <div className="chicago">
+        <div className="chicago" id="chicago">
             <div className="chicago-container">
                 <div className="chicago-left-section">
                     <div className="chicago-left-content">

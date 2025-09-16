@@ -8,7 +8,7 @@ import { MENU_ITEM_DESC } from "../utils/constants";
 
 function Specials() {
     return (
-        <div className="specials">
+        <div className="specials" id="specials">
             <div className="specials-container">
                 <div className="specials-header">
                     <span className="specials-title">This weeks specials!</span>
