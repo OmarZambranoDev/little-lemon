@@ -27,6 +27,7 @@
 .footer-heading {
   font-size: 1.2rem;
   font-weight: 600;
+  font-family: sans-serif;
   margin-bottom: 1.5rem;
   color: #495E57;
   position: relative;
@@ -46,6 +47,7 @@
   text-decoration: none;
   display: block;
   padding: 0.25rem 0;
+  font-family: sans-serif;
 }
 
 .footer-link:hover {

@@ -5,6 +5,8 @@
     border-radius: 16px;
     border: none;
     font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
 }
 
 .button:hover {

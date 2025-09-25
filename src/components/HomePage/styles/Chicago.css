@@ -1,5 +1,6 @@
 .chicago {
     grid-area: chicago;
+    padding: 0 0 4rem 0;
 }
 
 .chicago-container {
@@ -66,6 +67,10 @@
 }
 
 @media (max-width: 768px) {
+    .chicago {
+        padding: 0;
+    }
+
     .chicago-container {
         flex-direction: column;
         padding: 0 2rem 0rem 2rem;

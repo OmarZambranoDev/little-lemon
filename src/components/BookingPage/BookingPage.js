@@ -1,11 +1,11 @@
 import "./styles/BookingPage.css";
 import BookingForm from "./BookingForm";
 
-function BookingPage() {
+function BookingPage({availableTimes, dispatch}) {
     return (
-        <div className="bookingpage">
-            <BookingForm />
-        </div>
+        <main className="bookingpage-content">
+            <BookingForm availableTimes={availableTimes} dispatch={dispatch}/>
+        </main>
     );
 };
 

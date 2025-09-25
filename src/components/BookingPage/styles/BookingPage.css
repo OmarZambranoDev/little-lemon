@@ -1,0 +1,8 @@
+.bookingpage-content {
+    background: #3a4a43;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
