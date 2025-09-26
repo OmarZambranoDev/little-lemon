@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import "./styles/BookingForm.css";
 
-const BookingForm = ({ availableTimes, dispatch }) => {
-    const [submitReady, setSubmitReady] = useState(false);
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     const [formData, setFormData] = useState({
         date: '',
         time: '',
@@ -13,19 +12,6 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     useEffect(() => {
         dispatch({ type: "initialize_times" });
     }, [])
-
-    useEffect(() => {
-        if (submitReady) {
-            try {
-                const responseSubmit = window.submitAPI(formData);
-
-                console.log('API returned submit:', responseSubmit);
-
-            } catch (error) {
-                console.error('Error calling fetchAPI:', error);
-            }
-        }
-    }, [submitReady]);
 
     const handleDateChange = (e) => {
         const selectedDate = e.target.value;
@@ -51,8 +37,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        setSubmitReady(true);
+        submitForm(formData);
     };
 
     return (
