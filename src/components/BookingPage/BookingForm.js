@@ -1,14 +1,45 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import "./styles/BookingForm.css";
 
 const BookingForm = ({ availableTimes, dispatch }) => {
-
+    const [submitReady, setSubmitReady] = useState(false);
     const [formData, setFormData] = useState({
         date: '',
         time: '',
         guests: 1,
         occasion: ''
     });
+
+    useEffect(() => {
+        dispatch({ type: "initialize_times" });
+    }, [])
+
+    useEffect(() => {
+        if (submitReady) {
+            try {
+                const responseSubmit = window.submitAPI(formData);
+
+                console.log('API returned submit:', responseSubmit);
+
+            } catch (error) {
+                console.error('Error calling fetchAPI:', error);
+            }
+        }
+    }, [submitReady]);
+
+    const handleDateChange = (e) => {
+        const selectedDate = e.target.value;
+
+        setFormData(prev => ({
+            ...prev,
+            date: selectedDate,
+            time: ''
+        }));
+
+        if (selectedDate) {
+            dispatch({ type: "update_times", payload: selectedDate });
+        }
+    };
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -18,20 +49,10 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         }));
     };
 
-    const handleDateChange = (e) => {
-        setFormData(prevState => ({
-            ...prevState,
-            date: e.target.value,
-            time: ''
-        }));
-
-        dispatch({type: "update_times"});
-    }
-
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
-        alert(`Reservation made for ${formData.date} at ${formData.time} for ${formData.guests} guests (${formData.occasion})`);
+        setSubmitReady(true);
     };
 
     return (

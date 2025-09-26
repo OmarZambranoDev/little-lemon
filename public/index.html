@@ -9,8 +9,8 @@
   <meta name="description" content="Web site created using create-react-app" />
   <meta name="description" content="Little Lemon website" />
   <meta name="og:title" content="Little Lemon" />
-  <meta name="og:description" content="Little Lemon website"/>
-  <meta name="og:image" content="Placeholder image"/>
+  <meta name="og:description" content="Little Lemon website" />
+  <meta name="og:image" content="Placeholder image" />
 
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <!--
@@ -43,6 +43,43 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+  <!-- <script src="https://raw.githubusercontent.com/courseraap/capstone/main/api.js"></script> -->
+  <!-- THE ABOVE SCRIPT ISN'T LOADING. ADDING CONTENTS BELOW. -->
+  <script>
+    const seededRandom = function (seed) {
+      var m = 2 ** 35 - 31;
+      var a = 185852;
+      var s = seed % m;
+      return function () {
+        return (s = s * a % m) / m;
+      };
+    }
+
+    const fetchAPI = function (date) {
+      let result = [];
+      let random = seededRandom(date.getDate());
+
+      for (let i = 17; i <= 23; i++) {
+        if (random() < 0.5) {
+          result.push(i + ':00');
+        }
+        if (random() < 0.5) {
+          result.push(i + ':30');
+        }
+      }
+      return result;
+    };
+
+    const submitAPI = function (formData) {
+      return true;
+    };
+
+    window.fetchAPI = fetchAPI;
+    window.submitAPI = submitAPI;
+
+    console.log('API functions loaded successfully!');
+  </script>
 </body>
 
 </html>
