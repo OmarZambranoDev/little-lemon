@@ -11,8 +11,16 @@ const mockTimes = [
   { value: "22:00", label: "22:00", disabled: false }
 ];
 
+const mockDispatch = jest.fn();
+const mockSubmitForm = jest.fn();
+
 test('Renders the BookingForm Date field', () => {
-    render(<BookingForm availableTimes={mockTimes}/>);
-    const fieldElement = screen.getByText("Choose date");
-    expect(fieldElement).toBeInTheDocument();
+  render(
+    <BookingForm
+      availableTimes={mockTimes}
+      dispatch={mockDispatch}
+      submitForm={mockSubmitForm}
+    />);
+  const fieldElement = screen.getByText("Choose date");
+  expect(fieldElement).toBeInTheDocument();
 })
