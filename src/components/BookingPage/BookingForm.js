@@ -8,6 +8,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
         guests: 1,
         occasion: ''
     });
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     useEffect(() => {
         dispatch({ type: "initialize_times" });
@@ -35,30 +36,43 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
         }));
     };
 
+    const validateForm = () => {
+        if (!formData.date || !formData.time || !formData.guests || !formData.occasion) {
+            return false;
+        }
+        return true;
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        submitForm(formData);
+        setIsSubmitted(true);
+
+        if (validateForm()) {
+            submitForm(formData);
+        }
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit}>
-            <label htmlFor="res-date">Choose date</label>
+        <form className={`form ${isSubmitted ? 'submitted' : ''}`} onSubmit={handleSubmit} noValidate>
+            <label htmlFor="reservation-date">Choose date</label>
             <input
                 type="date"
-                id="res-date"
+                id="reservation-date"
                 name="date"
                 value={formData.date}
                 onChange={handleDateChange}
                 required
+                aria-label="On Click"
             />
 
-            <label htmlFor="res-time">Choose time</label>
+            <label htmlFor="reservation-time">Choose time</label>
             <select
-                id="res-time"
+                id="reservation-time"
                 name="time"
                 value={formData.time}
                 onChange={handleInputChange}
                 required
+                aria-label="On Click"
             >
                 {availableTimes.map((option) => (
                     <option
@@ -72,10 +86,10 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                 ))}
             </select>
 
-            <label htmlFor="guests">Number of guests</label>
+            <label htmlFor="reservation-guests">Number of guests</label>
             <input
                 type="number"
-                id="guests"
+                id="reservation-guests"
                 name="guests"
                 placeholder="1"
                 min="1"
@@ -83,15 +97,17 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                 value={formData.guests}
                 onChange={handleInputChange}
                 required
+                aria-label="On Click"
             />
 
-            <label htmlFor="occasion">Occasion</label>
+            <label htmlFor="reservation-occasion">Occasion</label>
             <select
-                id="occasion"
+                id="reservation-occasion"
                 name="occasion"
                 value={formData.occasion}
                 onChange={handleInputChange}
                 required
+                aria-label="On Click"
             >
                 <option value="" disabled hidden>Select an occasion</option>
                 <option value="Birthday">Birthday</option>
@@ -99,7 +115,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                 <option value="Anniversary">Anniversary</option>
             </select>
 
-            <button type="submit" className="submit-btn">
+            <button type="submit" className="submit-btn" aria-label="On Click">
                 Make Your Reservation
             </button>
         </form>
